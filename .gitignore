@@ -9,10 +9,10 @@
 WEB-INF
 		
 # unpacked plugin folders
-plugins/**/*
+vendor/plugins/**/*
 
 # files directory where uploads go
-files
+public/files
 
 # DBMigrate plugin: generated SQL
 db/sql

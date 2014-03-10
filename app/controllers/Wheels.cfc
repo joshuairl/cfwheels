@@ -3,5 +3,5 @@
 	Do not delete this file.
 --->
 <cfcomponent output="false" displayName="Controller">
-	<cfinclude template="../wheels/controller.cfm">
+	<cfinclude template="../../wheels/controller.cfm">
 </cfcomponent>

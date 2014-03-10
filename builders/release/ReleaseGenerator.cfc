@@ -22,7 +22,7 @@
 		<cfset variables.source = ExpandPath(".")>
 		<cfset variables.buildtmp = ExpandPath("builders/output/release/wheels-build-temp-dir")>
 		<cfset variables.ignore = "builders,.project,.gitignore,.git,WEB-INF,aspnet_client,wheels-build-temp-dir,#variables.zipName#">
-		<cfset variables.folders = "files,images,javascripts,lib,plugins,stylesheets,tests">
+		<cfset variables.folders = "public,public/files,app/assets,app/assets/images,app/assets/javascripts,lib,lib/assets,vendor,vendor/plugins,app/assets/stylesheets,tests">
 		<cfset variables.remove = "builders">
 		<cfset variables.release_zip = "builders/output/release/#variables.zipName#">
 		<cfset variables.zipfile = "#ExpandPath(variables.release_zip)#">
@@ -128,17 +128,17 @@
 WEB-INF
 		
 # unpacked plugin folders
-plugins/**/*
+vendor/plugins/**/*
 
 # files directory where uploads go
-files
+public/files
 
 # DBMigrate plugin: generated SQL
 db/sql
 
 # AssetBundler plugin: generated bundles
-javascripts/bundles
-stylesheets/bundles
+app/assets/javascripts/bundles
+app/assets/stylesheets/bundles
 		</cfsavecontent>
 		
 		<cfreturn loc.content>

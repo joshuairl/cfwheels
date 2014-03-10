@@ -80,14 +80,14 @@
 		application.wheels.configPath = "config";
 		application.wheels.eventPath = "events";
 		application.wheels.filePath = "files";
-		application.wheels.imagePath = "images";
-		application.wheels.javascriptPath = "javascripts";
-		application.wheels.modelPath = "models";
-		application.wheels.modelComponentPath = "models";
-		application.wheels.pluginPath = "plugins";
-		application.wheels.pluginComponentPath = "plugins";
-		application.wheels.stylesheetPath = "stylesheets";
-		application.wheels.viewPath = "views";
+		application.wheels.imagePath = "app/assets/images";
+		application.wheels.javascriptPath = "app/assets/javascripts";
+		application.wheels.modelPath = "app/models";
+		application.wheels.modelComponentPath = "app.models";
+		application.wheels.pluginPath = "vendor/plugins";
+		application.wheels.pluginComponentPath = "vendor.plugins";
+		application.wheels.stylesheetPath = "app/assets/stylesheets";
+		application.wheels.viewPath = "app/views";
 		
 		// see if they are switching environments
 		loc.environment = $switchEnivronmentSecurity(application.wheels, url);
@@ -107,7 +107,7 @@
 
 		// load general developer settings first, then override with environment specific ones
 		$include(template="#application.wheels.configPath#/settings.cfm");
-		$include(template="#application.wheels.configPath#/#application.wheels.environment#/settings.cfm");
+		$include(template="#application.wheels.configPath#/environments/#application.wheels.environment#/settings.cfm");
 
 		if(application.wheels.clearQueryCacheOnReload)
 		{

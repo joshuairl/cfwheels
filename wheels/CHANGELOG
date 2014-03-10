@@ -1,3 +1,13 @@
+WHEELS VERSION 1.3.0 RESTRUCTURING CONCEPT 03/10/2014
+
+Path Changes
+==================
+* Controllers, Models, and Views will now be located in the "app" directory.
+* All assets such as images, stylesheets, javascripts will be located in the "app/assets" directory.
+* Plugins will now be in the "vendor/plugins" directory.
+* The "miscellaneous" directory has been changed to the "public" directory.
+* All environment files / directories are now within the "config/environments" directory.
+
 WHEELS VERSION 1.2.0 PREVIEW 1 11/18/2012
 
 Model Enhancements
